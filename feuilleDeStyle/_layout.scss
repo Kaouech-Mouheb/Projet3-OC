@@ -1,0 +1,40 @@
+$colorBack:#579c87;
+$colorFont:#fdcb46;
+$fontSize:22px;
+a{
+    text-decoration: none;
+    color:#000;
+}
+@mixin boxShadow{
+    -webkit-box-shadow: -2px 3px 18px -2px rgba(122,117,122,1);
+        -moz-box-shadow: -2px 3px 18px -2px rgba(122,117,122,1);
+            box-shadow: -2px 3px 18px -2px rgba(122,117,122,1);
+}
+
+@mixin Bloc_Principal($color){/*Main*/
+    width:70%;
+    margin:0px auto 80px;
+    padding:20px 100px;
+    background:$color;
+    height:1684px;
+    width:1190;
+}
+@mixin titre_Secondaire($size){ /*h2*/
+    text-align: center;
+    font-size:$size;
+    margin-top:95px;
+}
+@mixin titre_primaire($color){ /*h1 des pages menu*/
+    display: flex;
+    flex-direction: column;
+    font-size:$fontSize + 20px ;
+    margin: 156px auto 95px auto;
+    font-family: $color;
+    text-align: center;
+}
+@mixin section($f-size){
+    width:100%;
+    font-size:$fontSize + $f-size;
+    line-height: 44px;
+    margin-bottom:136px;
+}

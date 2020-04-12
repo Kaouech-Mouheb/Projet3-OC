@@ -1,0 +1,91 @@
+@import'_Normalize.scss';
+@import url('https://fonts.googleapis.com/css?family=Cormorant+Infant|Indie+Flower|Kaushan+Script|Mansalva&display=swap');
+@import '_layout.scss';
+header{
+    background:$colorBack;
+    text-align: center;
+    color:$colorFont;
+    height: 196px;
+    margin-top:0px;
+    a{
+        color:$colorFont;
+        text-decoration: none;
+    }
+    h1{
+        font-size: 68pt;
+        padding:36px 0px 36px 0px;
+        margin:0px;
+    }
+}
+.index__bloc{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    section{
+        width:440px;
+        height: 614px;
+        margin:81px auto 0px auto;
+        text-align:center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        transform: scale(1) 50s;
+        transition:all .5s ease;
+        transform:scale(1);
+        @include boxShadow;
+            &:first-of-type{
+                background:#fcdfdb ;
+                font-family: 'Mansalva', cursive, Arial, sans-serif;
+                h2{
+                    display: flex;
+                    flex-direction: column;   
+                }
+            }&:nth-of-type(2){
+                background:#fff5fe ;
+                font-family: 'Cormorant Infant', cursive, Arial, sans-serif;
+            }&:nth-of-type(3){
+                background:#f9f9f9 ;
+                font-family: 'Dancing Script', cursive, Arial, sans-serif;
+            }&:last-of-type{
+                background:#fdfffd;
+                font-family: 'Kaushan Script', cursive, Arial, sans-serif;
+            }&:hover{
+                transform:scale(1.2);
+            }
+    }       
+}
+
+/*Prochainement*/
+.btn_prochainement{        
+    width:300px;
+    margin:40px auto;
+    h4{
+        background:$colorBack;
+        color:#fdcb46;
+        font-size:$fontSize + 15;
+        padding:18px 0px 18px 0px;
+        text-align:center;
+        border-radius:0.5em;
+        transform: scale(1);
+        transition: all .5s ease;
+        &:hover{
+            transform:scale(1.1);
+            background-color: linear-gradient(150deg, rgba(255,255,255,0),rgba(182, 130, 130, 0) );
+        }
+    }
+}
+footer{
+    background:$colorBack;
+    color:$colorFont;
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 34px;
+    font-size:$fontSize + 15;
+    height: 109px
+}
+@import'_laNote.scss';
+@import'_leChic.scss';
+@import'_leDelice.scss';
+@import'_laPalette.scss';
+
+

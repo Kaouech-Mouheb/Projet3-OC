@@ -1,0 +1,19 @@
+
+    .la-Palette__bloc{
+        @include boxShadow;
+        @include Bloc_Principal(#fdfffd);
+        .titre_primaire{ 
+            @include titre_primaire(black);
+            
+        }h2{
+            @include titre_Secondaire(35px);
+            font-family: 'Kaushan Script', cursive, Arial, sans-serif;
+        }section{
+           @include section(5);
+           font-family: 'Cormorant Infant', cursive, Arial, sans-serif;
+        }.titre_secondaire{
+            font-size: $fontSize + 15;
+        }span{
+            float:right;
+        }
+}
