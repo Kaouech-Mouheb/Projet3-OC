@@ -341,7 +341,12 @@ template {
      ========================================================================== */
 a {
   text-decoration: none;
-  color: #000;
+}
+
+body {
+  width: 1300px;
+  margin: auto;
+  position: relative;
 }
 
 header {
@@ -377,12 +382,13 @@ header h1 {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  transform: scale(1) 50s;
-  transition: all .5s ease;
-  transform: scale(1);
   -webkit-box-shadow: -2px 3px 18px -2px #7a757a;
   -moz-box-shadow: -2px 3px 18px -2px #7a757a;
   box-shadow: -2px 3px 18px -2px #7a757a;
+}
+
+.index__bloc section a {
+  color: black;
 }
 
 .index__bloc section:first-of-type {
@@ -393,6 +399,10 @@ header h1 {
 .index__bloc section:first-of-type h2 {
   display: flex;
   flex-direction: column;
+}
+
+.index__bloc section:first-of-type h2 .fa-music {
+  color: linear-gradient(#f04c5f, #f6916a);
 }
 
 .index__bloc section:nth-of-type(2) {
@@ -410,40 +420,79 @@ header h1 {
   font-family: 'Kaushan Script', cursive, Arial, sans-serif;
 }
 
-.index__bloc section:hover {
-  transform: scale(1.2);
+.transition-menu {
+  transform: scale(1);
+  transition: all 1s linear;
+  opacity: 1;
+}
+
+.transition-menu:hover {
+  transform: scale(1.5);
+  opacity: 0.5;
 }
 
 /*Prochainement*/
-.btn_prochainement {
+div.btn {
+  margin: 81px auto 200px;
   width: 300px;
-  margin: 40px auto;
+  position: relative;
 }
 
-.btn_prochainement h4 {
+div.btn button {
+  width: 100%;
   background: #579c87;
   color: #fdcb46;
   font-size: 37px;
-  padding: 18px 0px 18px 0px;
+  padding: 18px;
   text-align: center;
   border-radius: 0.5em;
   transform: scale(1);
   transition: all .5s ease;
+  z-index: 1;
 }
 
-.btn_prochainement h4:hover {
+div.btn button:hover {
   transform: scale(1.1);
-  background-color: linear-gradient(150deg, rgba(255, 255, 255, 0), rgba(182, 130, 130, 0));
+}
+
+div.btn button:hover::after {
+  opacity: 1;
+}
+
+div.btn button::after {
+  content: "";
+  background-color: #457b6b;
+  border-radius: 0.5em;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  z-index: -1;
+  transition: all .5s ease;
+  opacity: 0;
 }
 
 footer {
   background: #579c87;
-  color: #fdcb46;
   display: flex;
-  justify-content: space-between;
-  padding: 0px 34px;
+  justify-content: space-around;
   font-size: 37px;
-  height: 109px;
+  height: 80px;
+  width: 100%;
+  color: #fdcb46;
+  max-width: 1300px;
+  position: fixed;
+  bottom: 0.1px;
+}
+
+footer h5 {
+  width: 30%;
+  margin: auto;
+}
+
+footer a {
+  color: #fdcb46;
 }
 
 .titre {
@@ -457,12 +506,14 @@ footer {
   box-shadow: -2px 3px 18px -2px #7a757a;
   /*Main*/
   width: 70%;
-  margin: 0px auto 80px;
+  margin: 0px auto;
   padding: 20px 100px;
   background: #fcdfdb;
   height: 1684px;
   width: 1190;
   color: #3d1319;
+  content: "";
+  margin: 0px auto 200px;
 }
 
 .la-Note__bloc .titre_primaire {
@@ -485,6 +536,7 @@ footer {
 }
 
 .la-Note__bloc section {
+  /*Pesonalisation des section dans les pages*/
   width: 100%;
   font-size: 27px;
   line-height: 44px;
@@ -506,11 +558,13 @@ footer {
   box-shadow: -2px 3px 18px -2px #7a757a;
   /*Main*/
   width: 70%;
-  margin: 0px auto 80px;
+  margin: 0px auto;
   padding: 20px 100px;
   background: #fff5fe;
   height: 1684px;
   width: 1190;
+  content: "";
+  margin: 0px auto 200px;
   font-family: 'Cormorant Infant', cursive, Arial, sans-serif;
 }
 
@@ -522,6 +576,7 @@ footer {
 }
 
 .le-Chic__bloc section {
+  /*Pesonalisation des section dans les pages*/
   width: 100%;
   font-size: 27px;
   line-height: 44px;
@@ -538,11 +593,13 @@ footer {
   box-shadow: -2px 3px 18px -2px #7a757a;
   /*Main*/
   width: 70%;
-  margin: 0px auto 80px;
+  margin: 0px auto;
   padding: 20px 100px;
   background: #edefef;
   height: 1684px;
   width: 1190;
+  content: "";
+  margin: 0px auto 200px;
 }
 
 .le-Delice__bloc .titre_primaire {
@@ -564,6 +621,7 @@ footer {
 }
 
 .le-Delice__bloc section {
+  /*Pesonalisation des section dans les pages*/
   width: 100%;
   font-size: 27px;
   line-height: 44px;
@@ -585,11 +643,13 @@ footer {
   box-shadow: -2px 3px 18px -2px #7a757a;
   /*Main*/
   width: 70%;
-  margin: 0px auto 80px;
+  margin: 0px auto;
   padding: 20px 100px;
   background: #fdfffd;
   height: 1684px;
   width: 1190;
+  content: "";
+  margin: 0px auto 200px;
 }
 
 .la-Palette__bloc .titre_primaire {
@@ -611,6 +671,7 @@ footer {
 }
 
 .la-Palette__bloc section {
+  /*Pesonalisation des section dans les pages*/
   width: 100%;
   font-size: 27px;
   line-height: 44px;
@@ -624,4 +685,35 @@ footer {
 
 .la-Palette__bloc span {
   float: right;
+}
+
+.mentions-legales__bloc {
+  /*Main*/
+  width: 70%;
+  margin: 0px auto;
+  padding: 20px 100px;
+  background: white;
+  height: 1684px;
+  width: 1190;
+  -webkit-box-shadow: -2px 3px 18px -2px #7a757a;
+  -moz-box-shadow: -2px 3px 18px -2px #7a757a;
+  box-shadow: -2px 3px 18px -2px #7a757a;
+  /*Pesonalisation des section dans les pages*/
+  width: 100%;
+  font-size: 32px;
+  line-height: 44px;
+  margin-bottom: 136px;
+  content: "";
+  margin: 0px auto 200px;
+}
+
+.mentions-legales__bloc h1 {
+  /*h1 des pages menu*/
+  display: flex;
+  flex-direction: column;
+  font-size: 42px;
+  margin: 156px auto 95px auto;
+  font-family: black;
+  text-align: center;
+  font-size: 2em;
 }

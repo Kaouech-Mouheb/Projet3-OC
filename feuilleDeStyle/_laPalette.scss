@@ -2,6 +2,7 @@
     .la-Palette__bloc{
         @include boxShadow;
         @include Bloc_Principal(#fdfffd);
+        @include after;
         .titre_primaire{ 
             @include titre_primaire(black);
             

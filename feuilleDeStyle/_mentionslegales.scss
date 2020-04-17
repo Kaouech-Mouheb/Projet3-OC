@@ -1,0 +1,10 @@
+.mentions-legales__bloc{
+    @include Bloc_Principal(white);
+    @include boxShadow;
+    @include section(10);
+    @include after;
+    h1{
+        @include titre_primaire(black);
+        font-size:2em;
+    }
+}

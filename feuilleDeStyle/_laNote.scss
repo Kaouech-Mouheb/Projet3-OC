@@ -6,6 +6,7 @@
     @include boxShadow;
     @include Bloc_Principal(#fcdfdb);
     color:#3d1319;
+    @include after;
     .titre_primaire{ 
         @include titre_primaire(#3d1319);
         font-family:'Mansalva', cursive, Arial, sans-serif;
@@ -13,6 +14,7 @@
     h2{
         @include titre_Secondaire(35px);
        font-family:'Mansalva', cursive, Arial, sans-serif;
+       
     }section{
        @include section(5);
        font-family:'Cormorant Infant', cursive, Arial, sans-serif;

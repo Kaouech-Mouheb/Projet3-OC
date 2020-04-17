@@ -1,6 +1,7 @@
 .le-Delice__bloc{
     @include boxShadow;
     @include Bloc_Principal(#edefef);
+    @include after;
     .titre_primaire{ 
         @include titre_primaire(black);
         
