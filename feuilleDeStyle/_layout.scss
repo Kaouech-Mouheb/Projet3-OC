@@ -4,6 +4,11 @@ $fontSize:22px;
 
 a{
     text-decoration: none;
+}/*color dégradé*/
+@mixin gradient ($direction, $grColor1, $grColor2){
+    background: linear-gradient($direction, $grColor1, $grColor2);
+    -webkit-text-fill-color:transparent;
+    -webkit-background-clip:text ;
 }
 @mixin boxShadow{
     -webkit-box-shadow: -2px 3px 18px -2px rgba(122,117,122,1);
@@ -12,19 +17,16 @@ a{
 }
 
 @mixin Bloc_Principal($color){/*Main*/
-    width:70%;
+    max-width:70%;
     margin:0px auto;
     padding:20px 100px;
     background:$color;
     height:1684px;
-    width:1190;
-
-   
 }
+/*contenu séparatif entre le bloc principal et le footer*/
 @mixin after{
     content:"";
-    margin:0px auto 200px;
-    
+    margin:0px auto 200px;   
 }
  
 @mixin titre_Secondaire($size){ /*h2*/
