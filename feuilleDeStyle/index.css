@@ -904,7 +904,7 @@ footer a {
     width: 100%;
   }
   header h1 {
-    font-size: 34pt;
+    font-size: 32pt;
     line-height: 1.15;
   }
   .index__bloc {
@@ -948,7 +948,7 @@ footer a {
     margin-top: 10px;
   }
   .la-Note__bloc section, .la-Palette__bloc section, .le-Chic__bloc section, .le-Delice__bloc section, .mentions-legales__bloc section {
-    width: 95%;
+    width: 100%;
     padding: 0px 5px;
     font-size: small;
     line-height: 1.75;
