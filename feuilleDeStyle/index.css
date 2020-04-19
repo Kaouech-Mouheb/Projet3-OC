@@ -351,31 +351,6 @@ body {
   position: relative;
 }
 
-header {
-  background: #579c87;
-  text-align: center;
-  color: #fdcb46;
-  height: 196px;
-  margin-top: 0px;
-}
-
-header a {
-  color: #fdcb46;
-  text-decoration: none;
-}
-
-header h1 {
-  font-size: 68pt;
-  padding: 36px 0px 36px 0px;
-  margin: 0px;
-}
-
-.fa-music {
-  background: linear-gradient(#f04c5f, #f6916a);
-  -webkit-text-fill-color: transparent;
-  -webkit-background-clip: text;
-}
-
 .index__bloc {
   display: flex;
   flex-wrap: wrap;
@@ -459,18 +434,167 @@ header h1 {
   color: #3e923a;
 }
 
+/*animation qui fait un zoom sur l'image*/
 .transition-menu {
-  transform: scale(1);
   transition: all 0.5s linear;
   opacity: 1;
 }
 
 .transition-menu:hover {
-  transform: scale(1.3);
   opacity: 0.5;
 }
 
-/*Prochainement*/
+/*Animation du bouton prochainement*/
+.button span {
+  background: #fdcb46;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  display: inline-block;
+  animation-name: points;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+span:first-of-type {
+  animation-delay: 0.5s;
+}
+
+span:nth-child(2) {
+  animation-delay: 1s;
+}
+
+span:nth-child(3) {
+  animation-delay: 1.5s;
+}
+
+@-webkit-keyframes points {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@-moz-keyframes points {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+/*bouton mentions légales / contactez-nous*/
+footer h5:hover {
+  animation-name: wiggle;
+  animation-duration: 0.3s;
+  animation-iteration-count: infinite;
+  -moz-animation-timing-function: linear;
+}
+
+/*bouton prochainement*/
+.button:hover {
+  animation-name: wiggle_Prochainement;
+  animation-duration: 0.4s;
+  animation-iteration-count: infinite;
+  -moz-animation-timing-function: linear;
+}
+
+/*effet wiggle*/
+@-webkit-keyframes wiggle {
+  0% {
+    transform: translate(2px, -2px) rotate(2deg);
+  }
+  15% {
+    transform: translate(1px, -1px) rotate(0deg);
+  }
+  30% {
+    transform: translate(0px, 0px) rotate(0deg);
+  }
+  45% {
+    transform: translate(-2px, 2px) rotate(2deg);
+  }
+  60% {
+    transform: translate(1px, -1px) rotate(0deg);
+  }
+  75% {
+    transform: translate(0px, 0px) rotate(0deg);
+  }
+  90% {
+    transform: translate(2px, -2px) rotate(2deg);
+  }
+  to {
+    transform: translate(-1px, 1px) rotate(0deg);
+  }
+}
+
+@-moz-keyframes wiggle {
+  0% {
+    transform: translate(2px, -2px) rotate(1deg);
+  }
+  15% {
+    transform: translate(1px, -1px) rotate(0deg);
+  }
+  30% {
+    transform: translate(0px, 0px) rotate(1deg);
+  }
+  45% {
+    transform: translate(-2px, 2px) rotate(0deg);
+  }
+  60% {
+    transform: translate(1px, -1px) rotate(1deg);
+  }
+  75% {
+    transform: translate(0px, 0px) rotate(0deg);
+  }
+  90% {
+    transform: translate(2px, -2px) rotate(1deg);
+  }
+  to {
+    transform: translate(-1px, 1px) rotate(0deg);
+  }
+}
+
+/*effet wiggle bouton prochainement*/
+@-webkit-keyframes wiggle_Prochainement {
+  0% {
+    transform: translate(0px, 2px) rotate(0);
+  }
+  30% {
+    transform: translate(-2px, 0px) rotate(1);
+  }
+  60% {
+    transform: translate(2px, 0px) rotate(0);
+  }
+  to {
+    transform: translate(0px, 2px) rotate(1);
+  }
+}
+
+@-moz-keyframes wiggle_Prochainement {
+  0% {
+    transform: translate(0px, 2px);
+  }
+  30% {
+    transform: translate(-2px, 0px);
+  }
+  60% {
+    transform: translate(2px, 0px);
+  }
+  to {
+    transform: translate(0px, 2px);
+  }
+}
+
+.fa-music {
+  background: linear-gradient(#f04c5f, #f6916a);
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+}
+
 .button {
   margin: 81px auto 200px;
   width: 300px;
@@ -508,12 +632,30 @@ header h1 {
   opacity: 0;
 }
 
+header {
+  background: #579c87;
+  height: 116px;
+}
+
+header a {
+  color: #fdcb46;
+  text-decoration: none;
+}
+
+header h1 {
+  font-size: 58pt;
+  text-align: center;
+  color: #fdcb46;
+  margin: 0px;
+  line-height: 1.35;
+}
+
 footer {
   background: #579c87;
   display: flex;
   justify-content: space-around;
   font-size: 37px;
-  height: 80px;
+  height: 60px;
   width: 100%;
   color: #fdcb46;
   max-width: 1300px;
@@ -549,7 +691,7 @@ footer a {
   height: 1684px;
   color: #3d1319;
   content: "";
-  margin: 0px auto 200px;
+  margin: 0px auto 100px;
 }
 
 .la-Note__bloc .titre_primaire {
@@ -599,7 +741,7 @@ footer a {
   background: #fff5fe;
   height: 1684px;
   content: "";
-  margin: 0px auto 200px;
+  margin: 0px auto 100px;
   font-family: 'Cormorant Infant', cursive, Arial, sans-serif;
 }
 
@@ -633,7 +775,7 @@ footer a {
   background: #edefef;
   height: 1684px;
   content: "";
-  margin: 0px auto 200px;
+  margin: 0px auto 100px;
 }
 
 .le-Delice__bloc .titre_primaire {
@@ -682,7 +824,7 @@ footer a {
   background: #fdfffd;
   height: 1684px;
   content: "";
-  margin: 0px auto 200px;
+  margin: 0px auto 100px;
 }
 
 .la-Palette__bloc .titre_primaire {
@@ -737,7 +879,7 @@ footer a {
   line-height: 44px;
   margin-bottom: 136px;
   content: "";
-  margin: 0px auto 200px;
+  margin: 0px auto 100px;
 }
 
 .mentions-legales__bloc h1 {
@@ -755,113 +897,127 @@ footer a {
   color: #fdcb46;
 }
 
-/*animation du bouton prochainement*/
-.button span {
-  background: #fdcb46;
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
-  display: inline-block;
-  animation-name: points;
-  animation-duration: 2s;
-  animation-iteration-count: infinite;
-  animation-timing-function: linear;
-}
-
-span:first-of-type {
-  animation-delay: 0.5s;
-}
-
-span:nth-child(2) {
-  animation-delay: 1s;
-}
-
-span:nth-child(3) {
-  animation-delay: 1.5s;
-}
-
-@-webkit-keyframes points {
-  0% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-  }
-}
-
-@-moz-keyframes points {
-  0% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-  }
-}
-
-footer h5:hover {
-  animation-name: wiggle;
-  animation-duration: 0.3s;
-  animation-iteration-count: infinite;
-  -moz-animation-timing-function: linear;
-}
-
-/*effet wiggle*/
-@-webkit-keyframes wiggle {
-  0% {
-    transform: translate(2px, -2px) rotate(2deg);
-  }
-  15% {
-    transform: translate(1px, -1px) rotate(0deg);
-  }
-  30% {
-    transform: translate(0px, 0px) rotate(0deg);
-  }
-  45% {
-    transform: translate(-2px, 2px) rotate(2deg);
-  }
-  60% {
-    transform: translate(1px, -1px) rotate(0deg);
-  }
-  75% {
-    transform: translate(0px, 0px) rotate(0deg);
-  }
-  90% {
-    transform: translate(2px, -2px) rotate(2deg);
-  }
-  to {
-    transform: translate(-1px, 1px) rotate(0deg);
-  }
-}
-
-@-moz-keyframes wiggle {
-  0% {
-    transform: translate(2px, -2px) rotate(2deg);
-  }
-  15% {
-    transform: translate(1px, -1px) rotate(0deg);
-  }
-  30% {
-    transform: translate(0px, 0px) rotate(0deg);
-  }
-  45% {
-    transform: translate(-2px, 2px) rotate(2deg);
-  }
-  60% {
-    transform: translate(1px, -1px) rotate(0deg);
-  }
-  75% {
-    transform: translate(0px, 0px) rotate(0deg);
-  }
-  90% {
-    transform: translate(2px, -2px) rotate(2deg);
-  }
-  to {
-    transform: translate(-1px, 1px) rotate(0deg);
-  }
-}
-
 @media all and (max-width: 480px) {
+  /*LA PAGE INDEX .HTML*/
+  header {
+    height: 100px;
+    width: 100%;
+  }
+  header h1 {
+    font-size: 34pt;
+    line-height: 1.15;
+  }
   .index__bloc {
-    body: 30%;
+    width: 90%;
+    padding: 10px;
+    margin: 0px auto;
+  }
+  .index__bloc h2, .index__bloc h3 {
+    font-size: medium;
+  }
+  .button {
+    width: 200px;
+    font-size: medium;
+  }
+  footer {
+    width: 100%;
+    justify-content: space-around;
+  }
+  footer h5 {
+    font-size: medium;
+  }
+  /*LA NOTE ENCHANTEE*/
+  .titre {
+    text-align: center;
+    font-size: medium;
+  }
+  .la-Note__bloc, .la-Palette__bloc, .le-Chic__bloc, .le-Delice__bloc, .mentions-legales__bloc {
+    width: 100%;
+    padding: 5px;
+    margin: 0px auto;
+    height: 100%;
+    content: "";
+    margin: 0px auto 100px;
+  }
+  .la-Note__bloc .titre_primaire, .la-Palette__bloc .titre_primaire, .le-Chic__bloc .titre_primaire, .le-Delice__bloc .titre_primaire, .mentions-legales__bloc .titre_primaire {
+    margin: 10px 0px 20px;
+    font-size: large;
+  }
+  .la-Note__bloc h2, .la-Palette__bloc h2, .le-Chic__bloc h2, .le-Delice__bloc h2, .mentions-legales__bloc h2 {
+    font-size: medium;
+    margin-top: 10px;
+  }
+  .la-Note__bloc section, .la-Palette__bloc section, .le-Chic__bloc section, .le-Delice__bloc section, .mentions-legales__bloc section {
+    width: 95%;
+    padding: 0px 5px;
+    font-size: small;
+    line-height: 1.75;
+    margin-bottom: 26px;
+  }
+  .la-Note__bloc .titre_secondaire, .la-Palette__bloc .titre_secondaire, .le-Chic__bloc .titre_secondaire, .le-Delice__bloc .titre_secondaire, .mentions-legales__bloc .titre_secondaire {
+    font-size: large;
+    margin: 10px 0px 20px;
+  }
+}
+
+@media all and (max-width: 1070px) {
+  /*LA PAGE INDEX .HTML*/
+  header {
+    height: 100px;
+    width: 100%;
+  }
+  header h1 {
+    font-size: 54pt;
+  }
+  .index__bloc {
+    width: 90%;
+    padding: 10px;
+    margin: 0px auto;
+  }
+  .index__bloc h2, .index__bloc h3 {
+    font-size: medium;
+  }
+  .button {
+    width: 200px;
+    font-size: large;
+  }
+  footer {
+    width: 100%;
+    justify-content: space-around;
+  }
+  footer h5 {
+    font-size: medium;
+  }
+  /*LA NOTE ENCHANTEE / LA PALETTE /LE DELICE/ LE CHIC */
+  .titre {
+    text-align: center;
+    font-size: large;
+  }
+  .la-Note__bloc, .la-Palette__bloc, .le-Chic__bloc, .le-Delice__bloc, .mentions-legales__bloc {
+    width: 100%;
+    padding: 5px;
+    margin: 0px auto;
+    height: 100%;
+    content: "";
+    margin: 0px auto 100px;
+  }
+  .la-Note__bloc .titre_primaire, .la-Palette__bloc .titre_primaire, .le-Chic__bloc .titre_primaire, .le-Delice__bloc .titre_primaire, .mentions-legales__bloc .titre_primaire {
+    margin: 20px 0px 40px;
+    font-size: x-large;
+  }
+  .la-Note__bloc h2, .la-Palette__bloc h2, .le-Chic__bloc h2, .le-Delice__bloc h2, .mentions-legales__bloc h2 {
+    font-size: large;
+    margin-top: 20px;
+  }
+  .la-Note__bloc section, .la-Palette__bloc section, .le-Chic__bloc section, .le-Delice__bloc section, .mentions-legales__bloc section {
+    width: 95%;
+    padding: 0px 5px;
+    font-size: medium;
+    line-height: 1.75;
+    margin-bottom: 46px;
+  }
+  .la-Note__bloc .titre_secondaire, .la-Palette__bloc .titre_secondaire, .le-Chic__bloc .titre_secondaire, .le-Delice__bloc .titre_secondaire, .mentions-legales__bloc .titre_secondaire {
+    font-size: large;
+    margin: 20px 0px 40px;
   }
 }

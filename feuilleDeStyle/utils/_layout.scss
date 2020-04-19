@@ -26,7 +26,7 @@ a{
 /*contenu séparatif entre le bloc principal et le footer*/
 @mixin after{
     content:"";
-    margin:0px auto 200px;   
+    margin:0px auto 100px;   
 }
  
 @mixin titre_Secondaire($size){ /*h2*/

@@ -1,0 +1,21 @@
+footer{
+    background:$colorBack;
+    display: flex;
+    justify-content: space-around;
+    font-size:$fontSize + 15;
+    height: 60px;
+    width: 100%;
+    color:$colorFont;
+    max-width: 1300px;
+    position: fixed;
+    bottom:0.1px;
+    z-index:2;
+    h5{
+        width:30%;
+        margin:auto 0px;
+        text-align: center;
+    }
+    a{
+        color:$colorFont;
+    }
+}

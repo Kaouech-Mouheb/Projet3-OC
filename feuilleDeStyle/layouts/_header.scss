@@ -1,0 +1,15 @@
+header{
+    background:$colorBack;
+    height: 116px;
+    a{
+        color:$colorFont;
+        text-decoration: none;
+    }
+    h1{
+        font-size: 58pt;
+        text-align: center;
+        color:$colorFont;
+        margin:0px;
+        line-height: 1.35;
+    }
+}

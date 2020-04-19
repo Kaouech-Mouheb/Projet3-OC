@@ -1,0 +1,33 @@
+.button{
+    margin:81px auto 200px;
+    width:300px;
+    position: relative;   
+    background:$colorBack;
+    color:#fdcb46;
+    font-size:$fontSize + 15;
+    padding:18px;
+    text-align:center;
+    border-radius:0.5em;
+    transform: scale(1);
+    transition: all .5s ease;
+    z-index:1;
+    &:hover{
+        transform:scale(1.1);
+        &::after{
+            opacity: 1;
+        }
+    }
+    &::after{
+        content:"";           
+        background-color: darken($colorBack, 10);
+        border-radius: 0.5em;
+        position: absolute;
+        top:0;
+        bottom:0;
+        right:0;
+        left:0;
+        z-index: -1;
+        transition: all .5s ease;
+        opacity: 0;
+    }
+}
