@@ -1,0 +1,45 @@
+.titre{
+    text-align: center;
+    font-size: $fontSize +12;
+}
+.la-Note__bloc{
+    @include boxShadow;
+    @include Bloc_Principal(#fcdfdb);
+    color:#3d1319;
+    @include after;
+    height:100%;
+    .titre_primaire{ 
+        @include titre_primaire(#3d1319);
+        font-family:'Mansalva', cursive, Arial, sans-serif;
+    }
+    h2{
+        @include titre_Secondaire(45px);
+        .souligne{
+            font-family:'Mansalva', cursive, Arial, sans-serif;
+            @include souligne(to top, #531621 0%, rgb(134, 30, 30) 4px);
+            &:hover{
+                background-size: 100% 100%;
+            }
+        }
+    }.Note-img{
+        width:250px;
+    }section{
+       @include section(5);
+       font-family:'Cormorant Infant', cursive, Arial, sans-serif;
+    }div{
+        display: flex; 
+        justify-content: space-between; 
+    }
+    p{
+        width:80%;
+    }
+    span{
+        margin-top:30px;
+    }
+}h3{
+    text-align: center;
+    font-size: 40px;
+    font-family:'Mansalva', cursive, Arial, sans-serif;
+}
+
+

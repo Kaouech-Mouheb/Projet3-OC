@@ -1,0 +1,108 @@
+          
+@media (max-width:576px){
+    header{
+        width:100%;
+        h1{
+            font-size: 52pt;
+        }
+    }
+    .titre{
+    text-align: center;
+    font-size: medium;
+    }
+    .la-Note__bloc, .le-Chic__bloc, .la-Palette__bloc, .le-Delice__bloc{
+        max-width:95%;
+        padding:5px;
+        margin:0px auto;
+        height:100%;
+        .titre_primaire{
+            margin: 10px 0px 20px;
+            font-size: 23px;
+        }h2{
+            font-size: 13px;
+            margin-top: 10px;
+            &::after{
+                top:35px;
+            }
+        }section{
+            width:95%;
+            padding:0px 10px;
+            font-size:small;
+            line-height: 1.75;
+            margin-bottom:20px;
+            div{
+                display: flex;  
+            }
+            p{
+                width:90%;
+            }
+            span{
+                margin:17px 0px 0px 10px;
+            }
+            .titre_secondaire{
+                font-size: large;
+                margin:10px 0px 20px;
+
+            }
+        }.Note-img{
+            width:100px;
+        }@include after;
+    }
+}
+@media  all and (min-width:577px) and (max-width:768px){ 
+    h1{
+        font-size: 54pt;
+    }
+    .titre{
+    text-align: center;
+    font-size: x-large;
+    }
+    .la-Note__bloc, .le-Chic__bloc, .la-Palette__bloc, .le-Delice__bloc{
+        max-width:95%;
+        padding:15px;
+        margin:0px auto;
+        height:100%;
+        .titre_primaire{
+            margin: 20px 0px 40px;
+            font-size: 38px;
+        }h2{
+            font-size: 31px;
+            &::after{
+                top:60px;
+            }
+        }section{
+            width:100%;
+            font-size:medium;
+            line-height: 1.75;
+            margin-bottom:46px;
+            div{
+                display: flex;   
+            }
+            p{
+                width:90%;
+            }span{
+                margin: 17px 0px 0px 10px;
+            }.titre_secondaire{
+                font-size: 33px;
+                margin:20px 0px 40px;
+            }
+        }.Note-img{
+            width:150px;
+        } @include after;
+    }
+}
+@media  all and (min-width:769px) and (max-width:992px){
+.la-Note__bloc, .le-Chic__bloc, .la-Palette__bloc, .le-Delice__bloc{
+    max-width:95%;
+    padding:20px;
+    margin:0px auto;
+    height:100%;
+    .titre_primaire{
+        margin:1px;
+    }.Note-img{
+        width:200px;
+    }
+    @include after;
+}
+
+}

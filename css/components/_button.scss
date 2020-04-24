@@ -1,5 +1,5 @@
 .button{
-    margin:81px auto 200px;
+    margin:81px auto 141px;
     width:300px;
     position: relative;   
     background:$colorBack;
@@ -29,5 +29,10 @@
         z-index: -1;
         transition: all .5s ease;
         opacity: 0;
-    }
+    }     
 }
+@media (min-width: 768px) and (max-width:992px) {  
+        .button{
+            margin:50px auto 110px;
+        }
+    }

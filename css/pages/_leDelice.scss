@@ -2,18 +2,30 @@
     @include boxShadow;
     @include Bloc_Principal(#edefef);
     @include after;
+    height:100%;
     .titre_primaire{ 
         @include titre_primaire(black);
         
     }h2{
         @include titre_Secondaire(35px);
-       font-family:'Mansalva', cursive, Arial, sans-serif;
+        font-family:'Mansalva', cursive, Arial, sans-serif;
+        @include souligne(to top,  #0023db 0%, #0887fb  4px);
+        &:hover{
+           background-size: 100% 100%;
+     
+        }
     }section{
        @include section(5);
        font-family:'Cormorant Infant', cursive, Arial, sans-serif;
     }.titre_secondaire{
         font-size: $fontSize + 15;
-    }span{
-        float:right;
+    } div{
+        display: flex;   
+    }
+    p{
+        width:80%;
+    }
+    span{
+        margin-top:30px;
     }
 }

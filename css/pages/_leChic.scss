@@ -1,0 +1,29 @@
+
+.le-Chic__bloc{
+    @include boxShadow;
+    @include Bloc_Principal(#fff5fe);
+    @include after;
+    height:100%;
+    .titre_primaire{ 
+        @include gradient(to right, #e38a12, #8f5aff);
+        @include titre_primaire(black);
+        font-family: 'Cormorant Infant', cursive, Arial, sans-serif;
+    }h2{
+        @include titre_Secondaire(32px);
+        font-family: 'Cormorant Infant', cursive, Arial, sans-serif;
+    }section{
+        @include section(5);
+    }div{
+        display: flex;
+    }p{
+            width:90%;
+    }span{
+            margin-top:30px;
+    }section:first-of-type{
+    color:#e38a12;
+    }section:nth-of-type(2){
+        color:#a56799;
+    }section:last-of-type{
+        color:#6e4ccc;
+    }  
+}
