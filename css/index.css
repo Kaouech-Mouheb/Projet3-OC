@@ -344,7 +344,6 @@ a {
 }
 
 /*color dégradé*/
-/*contenu séparatif entre le bloc principal et le footer*/
 .button {
   margin: 81px auto 141px;
   width: 300px;
@@ -581,7 +580,7 @@ body {
 }
 
 .index__bloc section h2 {
-  font-size: 32px;
+  font-size: 31px;
 }
 
 .index__bloc section:first-of-type {
@@ -594,13 +593,16 @@ body {
   flex-direction: column;
 }
 
+.index__bloc section:first-of-type h3, .index__bloc section:first-of-type a {
+  color: #531621;
+}
+
 .index__bloc section:nth-of-type(2) {
   background: #fff5fe;
   font-family: 'Cormorant Infant', cursive, Arial, sans-serif;
 }
 
 .index__bloc section:nth-of-type(2) h2 {
-  font-size: 22px;
   background: linear-gradient(to right, #e38a12, #8f5aff);
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
@@ -646,6 +648,9 @@ body {
     width: 80%;
     height: 500px;
   }
+  .index__bloc section h2, .index__bloc section h3 {
+    font-size: 17px;
+  }
 }
 
 @media (min-width: 577px) and (max-width: 768px) {
@@ -653,12 +658,18 @@ body {
     width: 45%;
     height: 400px;
   }
+  .index__bloc section h2, .index__bloc section h3 {
+    font-size: 17px;
+  }
 }
 
 @media (min-width: 768px) and (max-width: 992px) {
   .index__bloc section {
     height: 500px;
     width: 350px;
+  }
+  .index__bloc section h2, .index__bloc section h3 {
+    font-size: 22px;
   }
 }
 
@@ -674,13 +685,13 @@ body {
   /*Main*/
   max-width: 70%;
   margin: 0px auto;
-  padding: 20px 100px;
   background: #fcdfdb;
   height: 1684px;
+  padding: 40px;
   color: #3d1319;
-  content: "";
-  margin: 0px auto 100px;
   height: 100%;
+  content: "";
+  margin: 0px auto 150px;
 }
 
 .la-Note__bloc .titre_primaire {
@@ -688,7 +699,7 @@ body {
   display: flex;
   flex-direction: column;
   font-size: 42px;
-  margin: 156px auto 95px auto;
+  margin: 100px auto 0px auto;
   font-family: #3d1319;
   text-align: center;
   font-family: 'Mansalva', cursive, Arial, sans-serif;
@@ -699,7 +710,8 @@ body {
   display: flex;
   justify-content: space-between;
   font-size: 45px;
-  margin-top: 95px;
+  margin: 50px -70px;
+  padding: 0px -20px;
 }
 
 .la-Note__bloc h2 .souligne {
@@ -714,15 +726,15 @@ body {
 }
 
 .la-Note__bloc .Note-img {
-  width: 250px;
+  width: 220px;
 }
 
 .la-Note__bloc section {
   /*Pesonalisation des section dans les pages*/
-  width: 100%;
-  font-size: 27px;
-  line-height: 44px;
-  margin-bottom: 136px;
+  width: 80%;
+  font-size: 20px;
+  line-height: 25px;
+  margin: 50px auto 0px;
   font-family: 'Cormorant Infant', cursive, Arial, sans-serif;
 }
 
@@ -736,10 +748,10 @@ body {
 }
 
 .la-Note__bloc span {
-  margin-top: 30px;
+  margin-top: 20px;
 }
 
-h3 {
+.la-Note__bloc h3 {
   text-align: center;
   font-size: 40px;
   font-family: 'Mansalva', cursive, Arial, sans-serif;
@@ -752,12 +764,12 @@ h3 {
   /*Main*/
   max-width: 70%;
   margin: 0px auto;
-  padding: 20px 100px;
   background: #fff5fe;
   height: 1684px;
-  content: "";
-  margin: 0px auto 100px;
+  padding: 40px;
   height: 100%;
+  content: "";
+  margin: 0px auto 150px;
 }
 
 .le-Chic__bloc .titre_primaire {
@@ -768,27 +780,41 @@ h3 {
   display: flex;
   flex-direction: column;
   font-size: 42px;
-  margin: 156px auto 95px auto;
+  margin: 100px auto 0px auto;
   font-family: black;
   text-align: center;
   font-family: 'Cormorant Infant', cursive, Arial, sans-serif;
 }
 
-.le-Chic__bloc h2 {
+.le-Chic__bloc section {
+  /*Pesonalisation des section dans les pages*/
+  width: 80%;
+  font-size: 20px;
+  line-height: 25px;
+  margin: 50px auto 0px;
+}
+
+.le-Chic__bloc section h2 {
   /*h2*/
   display: flex;
   justify-content: space-between;
-  font-size: 32px;
-  margin-top: 95px;
-  font-family: 'Cormorant Infant', cursive, Arial, sans-serif;
+  font-size: 22px;
+  margin: 50px -70px;
 }
 
-.le-Chic__bloc section {
-  /*Pesonalisation des section dans les pages*/
-  width: 100%;
-  font-size: 27px;
-  line-height: 44px;
-  margin-bottom: 136px;
+.le-Chic__bloc section h2 .souligne {
+  font-family: 'Cormorant Infant', cursive, Arial, sans-serif;
+  background: linear-gradient(to top, #8f5aff 0%, #e38a12 4px, transparent 5px) no-repeat;
+  background-size: 0% 100%;
+  transition: background-size .5s linear;
+}
+
+.le-Chic__bloc section h2 .souligne:hover {
+  background-size: 100% 100%;
+}
+
+.le-Chic__bloc .Note-img {
+  width: 250px;
 }
 
 .le-Chic__bloc div {
@@ -800,7 +826,7 @@ h3 {
 }
 
 .le-Chic__bloc span {
-  margin-top: 30px;
+  margin-top: 20px;
 }
 
 .le-Chic__bloc section:first-of-type {
@@ -822,12 +848,12 @@ h3 {
   /*Main*/
   max-width: 70%;
   margin: 0px auto;
-  padding: 20px 100px;
   background: #edefef;
   height: 1684px;
-  content: "";
-  margin: 0px auto 100px;
+  padding: 40px;
   height: 100%;
+  content: "";
+  margin: 0px auto 150px;
 }
 
 .le-Delice__bloc .titre_primaire {
@@ -835,7 +861,7 @@ h3 {
   display: flex;
   flex-direction: column;
   font-size: 42px;
-  margin: 156px auto 95px auto;
+  margin: 100px auto 0px auto;
   font-family: black;
   text-align: center;
 }
@@ -844,24 +870,32 @@ h3 {
   /*h2*/
   display: flex;
   justify-content: space-between;
-  font-size: 35px;
-  margin-top: 95px;
+  font-size: 32px;
+  margin: 50px -70px;
+}
+
+.le-Delice__bloc h2 .souligne {
+  font-weight: normal;
   font-family: 'Mansalva', cursive, Arial, sans-serif;
   background: linear-gradient(to top, #0023db 0%, #0887fb 4px, transparent 5px) no-repeat;
   background-size: 0% 100%;
   transition: background-size .5s linear;
 }
 
-.le-Delice__bloc h2:hover {
+.le-Delice__bloc h2 .souligne:hover {
   background-size: 100% 100%;
+}
+
+.le-Delice__bloc .Note-img {
+  width: 250px;
 }
 
 .le-Delice__bloc section {
   /*Pesonalisation des section dans les pages*/
-  width: 100%;
-  font-size: 27px;
-  line-height: 44px;
-  margin-bottom: 136px;
+  width: 80%;
+  font-size: 20px;
+  line-height: 25px;
+  margin: 50px auto 0px;
   font-family: 'Cormorant Infant', cursive, Arial, sans-serif;
 }
 
@@ -878,7 +912,7 @@ h3 {
 }
 
 .le-Delice__bloc span {
-  margin-top: 30px;
+  margin-top: 20px;
 }
 
 .la-Palette__bloc {
@@ -888,12 +922,12 @@ h3 {
   /*Main*/
   max-width: 70%;
   margin: 0px auto;
-  padding: 20px 100px;
   background: #fdfffd;
   height: 1684px;
-  content: "";
-  margin: 0px auto 100px;
+  padding: 40px;
   height: 100%;
+  content: "";
+  margin: 0px auto 150px;
 }
 
 .la-Palette__bloc .titre_primaire {
@@ -901,9 +935,13 @@ h3 {
   display: flex;
   flex-direction: column;
   font-size: 42px;
-  margin: 156px auto 95px auto;
+  margin: 100px auto 0px auto;
   font-family: black;
   text-align: center;
+  font-family: 'Kaushan Script', cursive, Arial, sans-serif;
+  background: linear-gradient(to right, #3e923a 5%, #beff7f);
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
 }
 
 .la-Palette__bloc h2 {
@@ -911,16 +949,31 @@ h3 {
   display: flex;
   justify-content: space-between;
   font-size: 35px;
-  margin-top: 95px;
+  margin: 50px -70px;
+}
+
+.la-Palette__bloc h2 .souligne {
+  font-weight: normal;
   font-family: 'Kaushan Script', cursive, Arial, sans-serif;
+  background: linear-gradient(to top, #3e923a 0%, #beff7f 4px, transparent 5px) no-repeat;
+  background-size: 0% 100%;
+  transition: background-size .5s linear;
+}
+
+.la-Palette__bloc h2 .souligne:hover {
+  background-size: 100% 100%;
+}
+
+.la-Palette__bloc .Note-img {
+  width: 250px;
 }
 
 .la-Palette__bloc section {
   /*Pesonalisation des section dans les pages*/
-  width: 100%;
-  font-size: 27px;
-  line-height: 44px;
-  margin-bottom: 136px;
+  width: 80%;
+  font-size: 20px;
+  line-height: 25px;
+  margin: 50px auto 0px;
   font-family: 'Cormorant Infant', cursive, Arial, sans-serif;
 }
 
@@ -937,27 +990,27 @@ h3 {
 }
 
 .la-Palette__bloc span {
-  margin-top: 30px;
+  margin-top: 20px;
 }
 
 .mentions-legales__bloc {
   /*Main*/
   max-width: 70%;
   margin: 0px auto;
-  padding: 20px 100px;
   background: #fff;
   height: 1684px;
+  padding: 40px;
   height: 100%;
   -webkit-box-shadow: -2px 3px 18px -2px #7a757a;
   -moz-box-shadow: -2px 3px 18px -2px #7a757a;
   box-shadow: -2px 3px 18px -2px #7a757a;
   /*Pesonalisation des section dans les pages*/
-  width: 100%;
-  font-size: 32px;
-  line-height: 44px;
-  margin-bottom: 136px;
+  width: 80%;
+  font-size: 20px;
+  line-height: 25px;
+  margin: 50px auto 0px;
   content: "";
-  margin: 0px auto 100px;
+  margin: 0px auto 150px;
 }
 
 .mentions-legales__bloc h1 {
@@ -965,7 +1018,7 @@ h3 {
   display: flex;
   flex-direction: column;
   font-size: 42px;
-  margin: 156px auto 95px auto;
+  margin: 100px auto 0px auto;
   font-family: black;
   text-align: center;
   font-size: 2em;
@@ -1022,7 +1075,7 @@ footer a {
     width: 100%;
   }
   header h1 {
-    font-size: 52pt;
+    font-size: 50pt;
   }
   .titre {
     text-align: center;
@@ -1034,18 +1087,18 @@ footer a {
     margin: 0px auto;
     height: 100%;
     content: "";
-    margin: 0px auto 100px;
+    margin: 0px auto 150px;
   }
   .la-Note__bloc .titre_primaire, .le-Chic__bloc .titre_primaire, .la-Palette__bloc .titre_primaire, .le-Delice__bloc .titre_primaire {
     margin: 10px 0px 20px;
     font-size: 23px;
   }
   .la-Note__bloc h2, .le-Chic__bloc h2, .la-Palette__bloc h2, .le-Delice__bloc h2 {
-    font-size: 13px;
-    margin-top: 10px;
+    font-size: 11px;
+    margin: 10px 0px 0px 0px;
   }
-  .la-Note__bloc h2::after, .le-Chic__bloc h2::after, .la-Palette__bloc h2::after, .le-Delice__bloc h2::after {
-    top: 35px;
+  .la-Note__bloc .Note-img, .le-Chic__bloc .Note-img, .la-Palette__bloc .Note-img, .le-Delice__bloc .Note-img {
+    width: 100px;
   }
   .la-Note__bloc section, .le-Chic__bloc section, .la-Palette__bloc section, .le-Delice__bloc section {
     width: 95%;
@@ -1067,8 +1120,13 @@ footer a {
     font-size: large;
     margin: 10px 0px 20px;
   }
-  .la-Note__bloc .Note-img, .le-Chic__bloc .Note-img, .la-Palette__bloc .Note-img, .le-Delice__bloc .Note-img {
-    width: 100px;
+  .button {
+    width: 150px;
+    font-size: 18px;
+    padding: 10px;
+  }
+  footer {
+    font-size: 18px;
   }
 }
 
@@ -1086,7 +1144,7 @@ footer a {
     margin: 0px auto;
     height: 100%;
     content: "";
-    margin: 0px auto 100px;
+    margin: 0px auto 150px;
   }
   .la-Note__bloc .titre_primaire, .le-Chic__bloc .titre_primaire, .la-Palette__bloc .titre_primaire, .le-Delice__bloc .titre_primaire {
     margin: 20px 0px 40px;
@@ -1094,9 +1152,10 @@ footer a {
   }
   .la-Note__bloc h2, .le-Chic__bloc h2, .la-Palette__bloc h2, .le-Delice__bloc h2 {
     font-size: 31px;
+    margin: 20px 0px;
   }
-  .la-Note__bloc h2::after, .le-Chic__bloc h2::after, .la-Palette__bloc h2::after, .le-Delice__bloc h2::after {
-    top: 60px;
+  .la-Note__bloc .Note-img, .le-Chic__bloc .Note-img, .la-Palette__bloc .Note-img, .le-Delice__bloc .Note-img {
+    width: 150px;
   }
   .la-Note__bloc section, .le-Chic__bloc section, .la-Palette__bloc section, .le-Delice__bloc section {
     width: 100%;
@@ -1117,8 +1176,13 @@ footer a {
     font-size: 33px;
     margin: 20px 0px 40px;
   }
-  .la-Note__bloc .Note-img, .le-Chic__bloc .Note-img, .la-Palette__bloc .Note-img, .le-Delice__bloc .Note-img {
-    width: 150px;
+  .button {
+    width: 180px;
+    font-size: 22px;
+    padding: 15px;
+  }
+  footer {
+    font-size: 22px;
   }
 }
 
@@ -1129,12 +1193,20 @@ footer a {
     margin: 0px auto;
     height: 100%;
     content: "";
-    margin: 0px auto 100px;
+    margin: 0px auto 150px;
   }
   .la-Note__bloc .titre_primaire, .le-Chic__bloc .titre_primaire, .la-Palette__bloc .titre_primaire, .le-Delice__bloc .titre_primaire {
     margin: 1px;
   }
   .la-Note__bloc .Note-img, .le-Chic__bloc .Note-img, .la-Palette__bloc .Note-img, .le-Delice__bloc .Note-img {
     width: 200px;
+  }
+  .button {
+    width: 250px;
+    font-size: 26px;
+    padding: 15px;
+  }
+  footer {
+    font-size: 26px;
   }
 }

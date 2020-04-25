@@ -2,12 +2,11 @@
     @include Bloc_Principal(#fff);
     height:100%;
     @include boxShadow;
-    @include section(10);
-    @include after;
+    @include section;
     h1{
         @include titre_primaire(black);
         font-size:2em;
     }a{
         color:$colorFont;
-    }
+    }@include after; 
 }

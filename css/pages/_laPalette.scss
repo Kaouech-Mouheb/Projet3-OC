@@ -2,16 +2,25 @@
 .la-Palette__bloc{
     @include boxShadow;
     @include Bloc_Principal(#fdfffd);
-    @include after;
     height:100%;
     .titre_primaire{ 
         @include titre_primaire(black);
-        
+        font-family: 'Kaushan Script', cursive, Arial, sans-serif;
+        @include gradient(to right, #3e923a 5% , #beff7f);
     }h2{
         @include titre_Secondaire(35px);
-        font-family: 'Kaushan Script', cursive, Arial, sans-serif;    
+        .souligne{
+            font-weight: normal;
+            font-family: 'Kaushan Script', cursive, Arial, sans-serif;
+            @include souligne(to top, #3e923a 0%, #beff7f 4px);
+            &:hover{
+                background-size: 100% 100%;
+            }
+        }
+    }.Note-img{
+        width:250px;
     }section{
-        @include section(5);
+        @include section;
         font-family: 'Cormorant Infant', cursive, Arial, sans-serif;
     }.titre_secondaire{
         font-size: $fontSize + 15;
@@ -22,6 +31,6 @@
         width:80%;
     }
     span{
-        margin-top:30px;
-    }
+        margin-top:20px;
+    }@include after; 
 }

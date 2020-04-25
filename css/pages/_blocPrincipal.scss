@@ -23,7 +23,7 @@ body{
         }
         @include boxShadow;
         h2{
-            font-size:$fontSize + 10 ;
+            font-size:31px;
         }
             &:first-of-type{
             background:#fcdfdb ;
@@ -31,12 +31,13 @@ body{
                 h2{
                     display: flex;
                     flex-direction: column;
+                }h3, a{
+                    color:#531621;
                 }
             }&:nth-of-type(2){
                 background:#fff5fe ;
                 font-family: 'Cormorant Infant', cursive, Arial, sans-serif;
                 h2{
-                    font-size:$fontSize;
                     @include gradient(to right, #e38a12, #8f5aff);
                 }h3{
                     color:#e38a12;
@@ -64,19 +65,27 @@ body{
             margin:20px 20px 0px;
             width:80%;
             height:500px;
+            h2, h3{
+                font-size: 17px;
+            }
         }
-        
     }
     @media (min-width:577px) and (max-width:768px){
         section{
             width:45%;
             height:400px;
+            h2, h3{
+                font-size: 17px;
+            }
         }
     }
     @media (min-width:768px) and (max-width:992px){
         section{
             height:500px;
             width:350px;
+            h2, h3{
+                font-size: 22px;
+            }
         }
     }
 }

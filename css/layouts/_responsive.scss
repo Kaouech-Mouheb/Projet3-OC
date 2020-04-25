@@ -3,7 +3,7 @@
     header{
         width:100%;
         h1{
-            font-size: 52pt;
+            font-size: 50pt;
         }
     }
     .titre{
@@ -19,11 +19,10 @@
             margin: 10px 0px 20px;
             font-size: 23px;
         }h2{
-            font-size: 13px;
-            margin-top: 10px;
-            &::after{
-                top:35px;
-            }
+            font-size: 11px;
+            margin: 10px 0px 0px 0px;
+        }.Note-img{
+            width:100px;
         }section{
             width:95%;
             padding:0px 10px;
@@ -42,11 +41,14 @@
             .titre_secondaire{
                 font-size: large;
                 margin:10px 0px 20px;
-
             }
-        }.Note-img{
-            width:100px;
-        }@include after;
+        }@include after; 
+    }.button{
+        width:150px;
+        font-size:18px;
+        padding: 10px;
+    }footer{
+        font-size: 18px;
     }
 }
 @media  all and (min-width:577px) and (max-width:768px){ 
@@ -67,9 +69,9 @@
             font-size: 38px;
         }h2{
             font-size: 31px;
-            &::after{
-                top:60px;
-            }
+            margin:20px 0px;
+        }.Note-img{
+            width:150px;
         }section{
             width:100%;
             font-size:medium;
@@ -86,9 +88,13 @@
                 font-size: 33px;
                 margin:20px 0px 40px;
             }
-        }.Note-img{
-            width:150px;
-        } @include after;
+        }@include after; 
+    }.button{
+        width:180px;
+        font-size:22px;
+        padding: 15px;
+    }footer{
+        font-size: 22px;
     }
 }
 @media  all and (min-width:769px) and (max-width:992px){
@@ -101,8 +107,13 @@
         margin:1px;
     }.Note-img{
         width:200px;
-    }
-    @include after;
+    }@include after; 
+}.button{
+    width:250px;
+    font-size:26px;
+    padding: 15px;
+}footer{
+    font-size: 26px;
 }
 
 }

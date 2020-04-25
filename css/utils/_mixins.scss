@@ -24,34 +24,33 @@ a{
 @mixin Bloc_Principal($color){/*Main*/
     max-width:70%;
     margin:0px auto;
-    padding:20px 100px;
     background:$color;
     height:1684px;
+    padding:40px;
 }
-/*contenu séparatif entre le bloc principal et le footer*/
-@mixin after{
-    content:"";
-    margin:0px auto 100px;   
-}
- 
+
 @mixin titre_Secondaire($size){ /*h2*/
     display: flex;
     justify-content: space-between;
     font-size:$size;
-    margin-top:95px;
+    margin:50px -70px;
+}
+@mixin after{
+    content:"";
+    margin:0px auto 150px;   
 }
 @mixin titre_primaire($color){ /*h1 des pages menu*/
     display: flex;
     flex-direction: column;
     font-size:$fontSize + 20px ;
-    margin: 156px auto 95px auto;
+    margin: 100px auto 0px auto;
     font-family: $color;
     text-align: center;
 }
-@mixin section($f-size){ /*Pesonalisation des section dans les pages*/
-    width:100%;
-    font-size:$fontSize + $f-size;
-    line-height: 44px;
-    margin-bottom:136px;
+@mixin section{ /*Pesonalisation des section dans les pages*/
+    width:80%;
+    font-size:20px;
+    line-height: 25px;
+    margin:50px auto 0px;
 }
 
