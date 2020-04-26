@@ -1,26 +1,25 @@
 
 .le-Chic__bloc{
-    @include boxShadow;
+    @include prefixer(box-shadow, -2px 3px 18px -2px rgba(122,117,122,1), webkit moz o ms);
     @include Bloc_Principal(#fff5fe);
     height:100%;
     .titre_primaire{ 
         @include gradient(to right, #e38a12, #8f5aff);
         @include titre_primaire(black);
         font-family: 'Cormorant Infant', cursive, Arial, sans-serif;
-    }section{
-        @include section;
-        h2{
-            @include titre_Secondaire(22px);
-            .souligne{
-                font-family: 'Cormorant Infant', cursive, Arial, sans-serif;
-                @include souligne(to top, #8f5aff 0%, #e38a12 4px);
-                &:hover{
-                    background-size: 100% 100%;
-                }
+    }h2{
+        @include titre_Secondaire(22px);
+        .souligne{
+            font-family: 'Cormorant Infant', cursive, Arial, sans-serif;
+            @include souligne(to top, #8f5aff 0px, #e38a12 6px);
+            &:hover{
+                background-size: 100% 100%;
             }
         }
     }.Note-img{
         width:250px;
+    }section{
+        @include section;
     }div{
         display: flex;
     }p{

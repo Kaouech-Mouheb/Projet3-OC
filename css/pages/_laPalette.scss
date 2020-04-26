@@ -1,6 +1,6 @@
 
 .la-Palette__bloc{
-    @include boxShadow;
+    @include prefixer(box-shadow, -2px 3px 18px -2px rgba(122,117,122,1), webkit moz o ms);
     @include Bloc_Principal(#fdfffd);
     height:100%;
     .titre_primaire{ 
@@ -12,7 +12,7 @@
         .souligne{
             font-weight: normal;
             font-family: 'Kaushan Script', cursive, Arial, sans-serif;
-            @include souligne(to top, #3e923a 0%, #beff7f 4px);
+            @include souligne(to top, #3e923a 0px, #cdeead 6px);
             &:hover{
                 background-size: 100% 100%;
             }

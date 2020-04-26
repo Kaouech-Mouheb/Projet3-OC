@@ -3,7 +3,7 @@
     font-size: $fontSize +12;
 }
 .la-Note__bloc{
-    @include boxShadow;
+   
     @include Bloc_Principal(#fcdfdb);
     color:#3d1319;
     height:100%;
@@ -15,7 +15,7 @@
         @include titre_Secondaire(45px);
         .souligne{
             font-family:'Mansalva', cursive, Arial, sans-serif;
-            @include souligne(to top, #531621 0%, rgb(134, 30, 30) 4px);
+            @include souligne(to top, #531621 0px, rgb(247, 8, 8) 6px);
             &:hover{
                 background-size: 100% 100%;
             }

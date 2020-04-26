@@ -6,6 +6,11 @@ body{
     margin: auto;
     position: relative;
 }
+.fa-music{
+    background: linear-gradient(#f04c5f, #f6916a);
+    -webkit-text-fill-color:transparent;
+    -webkit-background-clip:text;
+}
 .index__bloc{
     display: flex;
     flex-wrap: wrap;
@@ -18,10 +23,7 @@ body{
         display: flex;
         flex-direction: column;
         justify-content: center;
-        a{
-            color:black;
-        }
-        @include boxShadow;
+        @include prefixer(box-shadow, -2px 3px 18px -2px rgba(122,117,122,1), webkit moz o ms);
         h2{
             font-size:31px;
         }
@@ -39,15 +41,15 @@ body{
                 font-family: 'Cormorant Infant', cursive, Arial, sans-serif;
                 h2{
                     @include gradient(to right, #e38a12, #8f5aff);
-                }h3{
+                }h3, a{
                     color:#e38a12;
                 }
             }&:nth-of-type(3){
                 background:#f9f9f9 ;
                 font-family: 'Dancing Script', cursive, Arial, sans-serif;
-                h2{
+                h2, a{
                     @include gradient(to right, #0023db, #0887fb);
-                }h3{
+                }h3, a{
                     color:#0887fb;
                 }
             }&:last-of-type{
@@ -55,7 +57,7 @@ body{
                 font-family: 'Kaushan Script', cursive, Arial, sans-serif;
                 h2{
                     @include gradient(to right, #3e923a 5% , #beff7f);
-                }h3{
+                }h3, a{
                     color:#3e923a;
                 }
             }

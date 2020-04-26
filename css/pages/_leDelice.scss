@@ -1,5 +1,5 @@
 .le-Delice__bloc{
-    @include boxShadow;
+    @include prefixer(box-shadow, -2px 3px 18px -2px rgba(122,117,122,1), webkit moz o ms);
     @include Bloc_Principal(#edefef);
     height:100%;
     .titre_primaire{ 
@@ -10,7 +10,7 @@
         .souligne{
             font-weight: normal;
             font-family:'Mansalva', cursive, Arial, sans-serif;
-            @include souligne(to top,  #0023db 0%, #0887fb  4px);
+            @include souligne(to top,  #0023db 0px, #05080a  6px);
             &:hover{
                background-size: 100% 100%;
             }

@@ -344,6 +344,8 @@ a {
 }
 
 /*color dégradé*/
+/*souligner l'élément au survol de la souris*/
+/*Prefixes mixin*/
 .button {
   margin: 81px auto 141px;
   width: 300px;
@@ -389,13 +391,30 @@ a {
 
 /*animation qui fait un zoom sur l'image*/
 .transition-menu {
+  -webkit-transition: all 0.5s linear;
+  -moz-transition: all 0.5s linear;
+  -o-transition: all 0.5s linear;
+  -ms-transition: all 0.5s linear;
   transition: all 0.5s linear;
   opacity: 1;
+  -webkit-transform: scale(1);
+  -moz-transform: scale(1);
+  -o-transform: scale(1);
+  -ms-transform: scale(1);
   transform: scale(1);
 }
 
 .transition-menu:hover {
+  -webkit-transition: all 0.5s linear;
+  -moz-transition: all 0.5s linear;
+  -o-transition: all 0.5s linear;
+  -ms-transition: all 0.5s linear;
+  transition: all 0.5s linear;
   opacity: 0.5;
+  -webkit-transform: scale(1.3);
+  -moz-transform: scale(1.3);
+  -o-transform: scale(1.3);
+  -ms-transform: scale(1.3);
   transform: scale(1.3);
 }
 
@@ -433,21 +452,12 @@ span:nth-child(3) {
   }
 }
 
-@-moz-keyframes points {
-  0% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-  }
-}
-
 /*bouton mentions légales / contactez-nous*/
 footer h5:hover {
   animation-name: wiggle;
   animation-duration: 0.3s;
   animation-iteration-count: infinite;
-  -moz-animation-timing-function: linear;
+  animation-timing-function: linear;
 }
 
 /*bouton prochainement*/
@@ -455,7 +465,7 @@ footer h5:hover {
   animation-name: wiggle_Prochainement;
   animation-duration: 0.6s;
   animation-iteration-count: infinite;
-  -moz-animation-timing-function: linear;
+  animation-timing-function: linear;
 }
 
 /*effet wiggle*/
@@ -513,6 +523,33 @@ footer h5:hover {
   }
 }
 
+@keyframes wiggle {
+  0% {
+    transform: translate(2px, -2px) rotate(1deg);
+  }
+  15% {
+    transform: translate(1px, -1px) rotate(0deg);
+  }
+  30% {
+    transform: translate(0px, 0px) rotate(1deg);
+  }
+  45% {
+    transform: translate(-2px, 2px) rotate(0deg);
+  }
+  60% {
+    transform: translate(1px, -1px) rotate(1deg);
+  }
+  75% {
+    transform: translate(0px, 0px) rotate(0deg);
+  }
+  90% {
+    transform: translate(2px, -2px) rotate(1deg);
+  }
+  to {
+    transform: translate(-1px, 1px) rotate(0deg);
+  }
+}
+
 /*effet wiggle bouton prochainement*/
 @-webkit-keyframes wiggle_Prochainement {
   0% {
@@ -544,16 +581,49 @@ footer h5:hover {
   }
 }
 
-.fa-music {
-  background: linear-gradient(#f04c5f, #f6916a);
-  -webkit-text-fill-color: transparent;
-  -webkit-background-clip: text;
+@keyframes wiggle_Prochainement {
+  0% {
+    transform: translate(0px, 2px) rotate(1) scale(1);
+  }
+  30% {
+    transform: translate(-2px, 0px) scale(1.1);
+  }
+  60% {
+    transform: translate(2px, 0px) rotate(1) scale(1);
+  }
+  to {
+    transform: translate(0px, 2px) scale(1.1);
+  }
+}
+
+header {
+  background: #579c87;
+  height: 116px;
+}
+
+header a {
+  color: #fdcb46;
+  text-decoration: none;
+}
+
+header h1 {
+  font-size: 58pt;
+  text-align: center;
+  color: #fdcb46;
+  margin: 0px;
+  line-height: 1.35;
 }
 
 body {
   max-width: 1300px;
   margin: auto;
   position: relative;
+}
+
+.fa-music {
+  background: linear-gradient(#f04c5f, #f6916a);
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
 }
 
 .index__bloc {
@@ -572,11 +642,9 @@ body {
   justify-content: center;
   -webkit-box-shadow: -2px 3px 18px -2px #7a757a;
   -moz-box-shadow: -2px 3px 18px -2px #7a757a;
+  -o-box-shadow: -2px 3px 18px -2px #7a757a;
+  -ms-box-shadow: -2px 3px 18px -2px #7a757a;
   box-shadow: -2px 3px 18px -2px #7a757a;
-}
-
-.index__bloc section a {
-  color: black;
 }
 
 .index__bloc section h2 {
@@ -605,10 +673,16 @@ body {
 .index__bloc section:nth-of-type(2) h2 {
   background: linear-gradient(to right, #e38a12, #8f5aff);
   -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+  -o-text-fill-color: transparent;
+  -ms-text-fill-color: transparent;
   -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -o-background-clip: text;
+  -ms-background-clip: text;
 }
 
-.index__bloc section:nth-of-type(2) h3 {
+.index__bloc section:nth-of-type(2) h3, .index__bloc section:nth-of-type(2) a {
   color: #e38a12;
 }
 
@@ -617,13 +691,19 @@ body {
   font-family: 'Dancing Script', cursive, Arial, sans-serif;
 }
 
-.index__bloc section:nth-of-type(3) h2 {
+.index__bloc section:nth-of-type(3) h2, .index__bloc section:nth-of-type(3) a {
   background: linear-gradient(to right, #0023db, #0887fb);
   -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+  -o-text-fill-color: transparent;
+  -ms-text-fill-color: transparent;
   -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -o-background-clip: text;
+  -ms-background-clip: text;
 }
 
-.index__bloc section:nth-of-type(3) h3 {
+.index__bloc section:nth-of-type(3) h3, .index__bloc section:nth-of-type(3) a {
   color: #0887fb;
 }
 
@@ -635,10 +715,16 @@ body {
 .index__bloc section:last-of-type h2 {
   background: linear-gradient(to right, #3e923a 5%, #beff7f);
   -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+  -o-text-fill-color: transparent;
+  -ms-text-fill-color: transparent;
   -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -o-background-clip: text;
+  -ms-background-clip: text;
 }
 
-.index__bloc section:last-of-type h3 {
+.index__bloc section:last-of-type h3, .index__bloc section:last-of-type a {
   color: #3e923a;
 }
 
@@ -679,9 +765,6 @@ body {
 }
 
 .la-Note__bloc {
-  -webkit-box-shadow: -2px 3px 18px -2px #7a757a;
-  -moz-box-shadow: -2px 3px 18px -2px #7a757a;
-  box-shadow: -2px 3px 18px -2px #7a757a;
   /*Main*/
   max-width: 70%;
   margin: 0px auto;
@@ -715,7 +798,7 @@ body {
 
 .la-Note__bloc h2 .souligne {
   font-family: 'Mansalva', cursive, Arial, sans-serif;
-  background: linear-gradient(to top, #531621 0%, #861e1e 4px, transparent 5px) no-repeat;
+  background: linear-gradient(to top, #531621 0px, #f70808 6px, transparent 5px) no-repeat;
   background-size: 0% 100%;
   transition: background-size .5s linear;
 }
@@ -759,6 +842,8 @@ body {
 .le-Chic__bloc {
   -webkit-box-shadow: -2px 3px 18px -2px #7a757a;
   -moz-box-shadow: -2px 3px 18px -2px #7a757a;
+  -o-box-shadow: -2px 3px 18px -2px #7a757a;
+  -ms-box-shadow: -2px 3px 18px -2px #7a757a;
   box-shadow: -2px 3px 18px -2px #7a757a;
   /*Main*/
   max-width: 70%;
@@ -774,7 +859,13 @@ body {
 .le-Chic__bloc .titre_primaire {
   background: linear-gradient(to right, #e38a12, #8f5aff);
   -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+  -o-text-fill-color: transparent;
+  -ms-text-fill-color: transparent;
   -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -o-background-clip: text;
+  -ms-background-clip: text;
   /*h1 des pages menu*/
   display: flex;
   flex-direction: column;
@@ -785,15 +876,7 @@ body {
   font-family: 'Cormorant Infant', cursive, Arial, sans-serif;
 }
 
-.le-Chic__bloc section {
-  /*Pesonalisation des section dans les pages*/
-  width: 80%;
-  font-size: 20px;
-  line-height: 25px;
-  margin: 50px auto 0px;
-}
-
-.le-Chic__bloc section h2 {
+.le-Chic__bloc h2 {
   /*h2*/
   display: flex;
   justify-content: space-between;
@@ -801,19 +884,27 @@ body {
   margin: 50px -70px;
 }
 
-.le-Chic__bloc section h2 .souligne {
+.le-Chic__bloc h2 .souligne {
   font-family: 'Cormorant Infant', cursive, Arial, sans-serif;
-  background: linear-gradient(to top, #8f5aff 0%, #e38a12 4px, transparent 5px) no-repeat;
+  background: linear-gradient(to top, #8f5aff 0px, #e38a12 6px, transparent 5px) no-repeat;
   background-size: 0% 100%;
   transition: background-size .5s linear;
 }
 
-.le-Chic__bloc section h2 .souligne:hover {
+.le-Chic__bloc h2 .souligne:hover {
   background-size: 100% 100%;
 }
 
 .le-Chic__bloc .Note-img {
   width: 250px;
+}
+
+.le-Chic__bloc section {
+  /*Pesonalisation des section dans les pages*/
+  width: 80%;
+  font-size: 20px;
+  line-height: 25px;
+  margin: 50px auto 0px;
 }
 
 .le-Chic__bloc div {
@@ -843,6 +934,8 @@ body {
 .le-Delice__bloc {
   -webkit-box-shadow: -2px 3px 18px -2px #7a757a;
   -moz-box-shadow: -2px 3px 18px -2px #7a757a;
+  -o-box-shadow: -2px 3px 18px -2px #7a757a;
+  -ms-box-shadow: -2px 3px 18px -2px #7a757a;
   box-shadow: -2px 3px 18px -2px #7a757a;
   /*Main*/
   max-width: 70%;
@@ -876,7 +969,7 @@ body {
 .le-Delice__bloc h2 .souligne {
   font-weight: normal;
   font-family: 'Mansalva', cursive, Arial, sans-serif;
-  background: linear-gradient(to top, #0023db 0%, #0887fb 4px, transparent 5px) no-repeat;
+  background: linear-gradient(to top, #0023db 0px, #05080a 6px, transparent 5px) no-repeat;
   background-size: 0% 100%;
   transition: background-size .5s linear;
 }
@@ -917,6 +1010,8 @@ body {
 .la-Palette__bloc {
   -webkit-box-shadow: -2px 3px 18px -2px #7a757a;
   -moz-box-shadow: -2px 3px 18px -2px #7a757a;
+  -o-box-shadow: -2px 3px 18px -2px #7a757a;
+  -ms-box-shadow: -2px 3px 18px -2px #7a757a;
   box-shadow: -2px 3px 18px -2px #7a757a;
   /*Main*/
   max-width: 70%;
@@ -940,7 +1035,13 @@ body {
   font-family: 'Kaushan Script', cursive, Arial, sans-serif;
   background: linear-gradient(to right, #3e923a 5%, #beff7f);
   -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+  -o-text-fill-color: transparent;
+  -ms-text-fill-color: transparent;
   -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -o-background-clip: text;
+  -ms-background-clip: text;
 }
 
 .la-Palette__bloc h2 {
@@ -954,7 +1055,7 @@ body {
 .la-Palette__bloc h2 .souligne {
   font-weight: normal;
   font-family: 'Kaushan Script', cursive, Arial, sans-serif;
-  background: linear-gradient(to top, #3e923a 0%, #beff7f 4px, transparent 5px) no-repeat;
+  background: linear-gradient(to top, #3e923a 0px, #cdeead 6px, transparent 5px) no-repeat;
   background-size: 0% 100%;
   transition: background-size .5s linear;
 }
@@ -1002,6 +1103,8 @@ body {
   height: 100%;
   -webkit-box-shadow: -2px 3px 18px -2px #7a757a;
   -moz-box-shadow: -2px 3px 18px -2px #7a757a;
+  -o-box-shadow: -2px 3px 18px -2px #7a757a;
+  -ms-box-shadow: -2px 3px 18px -2px #7a757a;
   box-shadow: -2px 3px 18px -2px #7a757a;
   /*Pesonalisation des section dans les pages*/
   width: 80%;
@@ -1025,24 +1128,6 @@ body {
 
 .mentions-legales__bloc a {
   color: #fdcb46;
-}
-
-header {
-  background: #579c87;
-  height: 116px;
-}
-
-header a {
-  color: #fdcb46;
-  text-decoration: none;
-}
-
-header h1 {
-  font-size: 58pt;
-  text-align: center;
-  color: #fdcb46;
-  margin: 0px;
-  line-height: 1.35;
 }
 
 footer {
@@ -1081,15 +1166,14 @@ footer a {
     font-size: medium;
   }
   .la-Note__bloc, .le-Chic__bloc, .la-Palette__bloc, .le-Delice__bloc {
-    max-width: 95%;
-    padding: 5px;
-    margin: 0px auto;
+    max-width: 92%;
+    padding: 0px;
+    margin: 10px auto 90px;
     height: 100%;
-    content: "";
-    margin: 0px auto 150px;
   }
   .la-Note__bloc .titre_primaire, .le-Chic__bloc .titre_primaire, .la-Palette__bloc .titre_primaire, .le-Delice__bloc .titre_primaire {
-    margin: 10px 0px 20px;
+    margin-top: 15px;
+    padding-top: 15px;
     font-size: 23px;
   }
   .la-Note__bloc h2, .le-Chic__bloc h2, .la-Palette__bloc h2, .le-Delice__bloc h2 {
@@ -1104,7 +1188,7 @@ footer a {
     padding: 0px 10px;
     font-size: small;
     line-height: 1.75;
-    margin-bottom: 20px;
+    margin-top: 10px;
   }
   .la-Note__bloc section div, .le-Chic__bloc section div, .la-Palette__bloc section div, .le-Delice__bloc section div {
     display: flex;
@@ -1113,15 +1197,19 @@ footer a {
     width: 90%;
   }
   .la-Note__bloc section span, .le-Chic__bloc section span, .la-Palette__bloc section span, .le-Delice__bloc section span {
-    margin: 17px 0px 0px 10px;
+    margin-top: 17px;
   }
   .la-Note__bloc section .titre_secondaire, .le-Chic__bloc section .titre_secondaire, .la-Palette__bloc section .titre_secondaire, .le-Delice__bloc section .titre_secondaire {
     font-size: large;
     margin: 10px 0px 20px;
   }
+  .la-Note__bloc h3, .le-Chic__bloc h3, .la-Palette__bloc h3, .le-Delice__bloc h3 {
+    font-size: 20px;
+    padding: 20px;
+  }
   .button {
-    width: 150px;
-    font-size: 18px;
+    width: 200px;
+    font-size: 16px;
     padding: 10px;
   }
   footer {
@@ -1139,28 +1227,27 @@ footer a {
   }
   .la-Note__bloc, .le-Chic__bloc, .la-Palette__bloc, .le-Delice__bloc {
     max-width: 95%;
-    padding: 15px;
-    margin: 0px auto;
+    padding: 0px;
+    margin: 0px auto 100px;
     height: 100%;
-    content: "";
-    margin: 0px auto 150px;
   }
   .la-Note__bloc .titre_primaire, .le-Chic__bloc .titre_primaire, .la-Palette__bloc .titre_primaire, .le-Delice__bloc .titre_primaire {
-    margin: 20px 0px 40px;
+    margin-top: 20px;
+    padding-top: 20px;
     font-size: 38px;
   }
   .la-Note__bloc h2, .le-Chic__bloc h2, .la-Palette__bloc h2, .le-Delice__bloc h2 {
-    font-size: 31px;
+    font-size: 24px;
     margin: 20px 0px;
   }
   .la-Note__bloc .Note-img, .le-Chic__bloc .Note-img, .la-Palette__bloc .Note-img, .le-Delice__bloc .Note-img {
     width: 150px;
   }
   .la-Note__bloc section, .le-Chic__bloc section, .la-Palette__bloc section, .le-Delice__bloc section {
-    width: 100%;
+    width: 95%;
     font-size: medium;
     line-height: 1.75;
-    margin-bottom: 46px;
+    margin-top: 20px;
   }
   .la-Note__bloc section div, .le-Chic__bloc section div, .la-Palette__bloc section div, .le-Delice__bloc section div {
     display: flex;
@@ -1175,6 +1262,10 @@ footer a {
     font-size: 33px;
     margin: 20px 0px 40px;
   }
+  .la-Note__bloc h3, .le-Chic__bloc h3, .la-Palette__bloc h3, .le-Delice__bloc h3 {
+    font-size: 2px;
+    padding: 20px;
+  }
   .button {
     width: 180px;
     font-size: 22px;
@@ -1188,17 +1279,19 @@ footer a {
 @media all and (min-width: 769px) and (max-width: 992px) {
   .la-Note__bloc, .le-Chic__bloc, .la-Palette__bloc, .le-Delice__bloc {
     max-width: 95%;
-    padding: 20px;
-    margin: 0px auto;
-    height: 100%;
-    content: "";
+    padding: 0px;
     margin: 0px auto 150px;
+    height: 100%;
   }
   .la-Note__bloc .titre_primaire, .le-Chic__bloc .titre_primaire, .la-Palette__bloc .titre_primaire, .le-Delice__bloc .titre_primaire {
-    margin: 1px;
+    margin-top: 40px;
+    padding-top: 30px;
   }
   .la-Note__bloc .Note-img, .le-Chic__bloc .Note-img, .la-Palette__bloc .Note-img, .le-Delice__bloc .Note-img {
     width: 200px;
+  }
+  .la-Note__bloc h2, .le-Chic__bloc h2, .la-Palette__bloc h2, .le-Delice__bloc h2 {
+    font-size: 38px;
   }
   .button {
     width: 250px;
@@ -1207,5 +1300,9 @@ footer a {
   }
   footer {
     font-size: 26px;
+  }
+  h3 {
+    font-size: 28px;
+    padding: 20px;
   }
 }
