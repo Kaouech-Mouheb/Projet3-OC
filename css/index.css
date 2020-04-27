@@ -553,46 +553,46 @@ footer h5:hover {
 /*effet wiggle bouton prochainement*/
 @-webkit-keyframes wiggle_Prochainement {
   0% {
-    transform: translate(0px, 2px) rotate(1) scale(1);
+    transform: translate(0px, 2px) scale(1.01);
   }
   30% {
-    transform: translate(-2px, 0px) scale(1.1);
+    transform: translate(-2px, 0px);
   }
   60% {
-    transform: translate(2px, 0px) rotate(1) scale(1);
+    transform: translate(2px, 0px);
   }
   to {
-    transform: translate(0px, 2px) scale(1.1);
+    transform: translate(0px, 2px);
   }
 }
 
 @-moz-keyframes wiggle_Prochainement {
   0% {
-    transform: translate(0px, 2px) rotate(1) scale(1);
+    transform: translate(0px, 2px) scale(1.01);
   }
   30% {
-    transform: translate(-2px, 0px) scale(1.1);
+    transform: translate(-2px, 0px);
   }
   60% {
-    transform: translate(2px, 0px) rotate(1) scale(1);
+    transform: translate(2px, 0px);
   }
   to {
-    transform: translate(0px, 2px) scale(1.1);
+    transform: translate(0px, 2px);
   }
 }
 
 @keyframes wiggle_Prochainement {
   0% {
-    transform: translate(0px, 2px) rotate(1) scale(1);
+    transform: translate(0px, 2px) scale(1.01);
   }
   30% {
-    transform: translate(-2px, 0px) scale(1.1);
+    transform: translate(-2px, 0px);
   }
   60% {
-    transform: translate(2px, 0px) rotate(1) scale(1);
+    transform: translate(2px, 0px);
   }
   to {
-    transform: translate(0px, 2px) scale(1.1);
+    transform: translate(0px, 2px);
   }
 }
 
@@ -612,12 +612,6 @@ header h1 {
   color: #fdcb46;
   margin: 0px;
   line-height: 1.35;
-}
-
-body {
-  max-width: 1300px;
-  margin: auto;
-  position: relative;
 }
 
 .fa-music {
@@ -765,6 +759,11 @@ body {
 }
 
 .la-Note__bloc {
+  -webkit-box-shadow: -2px 3px 18px -2px #7a757a;
+  -moz-box-shadow: -2px 3px 18px -2px #7a757a;
+  -o-box-shadow: -2px 3px 18px -2px #7a757a;
+  -ms-box-shadow: -2px 3px 18px -2px #7a757a;
+  box-shadow: -2px 3px 18px -2px #7a757a;
   /*Main*/
   max-width: 70%;
   margin: 0px auto;
@@ -1130,30 +1129,6 @@ body {
   color: #fdcb46;
 }
 
-footer {
-  background: #579c87;
-  display: flex;
-  justify-content: space-around;
-  font-size: 37px;
-  height: 60px;
-  width: 100%;
-  color: #fdcb46;
-  max-width: 1300px;
-  position: fixed;
-  bottom: 0.1px;
-  z-index: 2;
-}
-
-footer h5 {
-  width: 30%;
-  margin: auto 0px;
-  text-align: center;
-}
-
-footer a {
-  color: #fdcb46;
-}
-
 @media (max-width: 576px) {
   header {
     width: 100%;
@@ -1305,4 +1280,35 @@ footer a {
     font-size: 28px;
     padding: 20px;
   }
+}
+
+@media all and (min-width: 1300px) {
+  body {
+    max-width: 1290px;
+    margin: auto;
+  }
+}
+
+footer {
+  background: #579c87;
+  display: flex;
+  justify-content: space-around;
+  font-size: 37px;
+  height: 60px;
+  width: 100%;
+  color: #fdcb46;
+  max-width: 1300px;
+  position: fixed;
+  bottom: 0.1px;
+  z-index: 2;
+}
+
+footer h5 {
+  width: 30%;
+  margin: auto 0px;
+  text-align: center;
+}
+
+footer a {
+  color: #fdcb46;
 }

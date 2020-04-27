@@ -103,21 +103,21 @@ footer h5:hover{
   }
   /*effet wiggle bouton prochainement*/
 @-webkit-keyframes wiggle_Prochainement {
-    0% { transform: translate(0px, 2px)   rotate(1) scale(1);}
-    30% { transform: translate(-2px, 0px)  scale(1.1);}
-    60% { transform: translate(2px, 0px)  rotate(1) scale(1);}
-    to { transform: translate(0px, 2px)    scale(1.1);}
+    0% { transform: translate(0px, 2px) scale(1.01);}
+    30% { transform: translate(-2px, 0px);}
+    60% { transform: translate(2px, 0px);}
+    to { transform: translate(0px, 2px);}
   }
   @-moz-keyframes wiggle_Prochainement {
-    0% { transform: translate(0px, 2px) rotate(1) scale(1); }
-    30% { transform: translate(-2px, 0px) scale(1.1); }
-    60% { transform: translate(2px, 0px) rotate(1) scale(1); }
-    to { transform: translate(0px, 2px) scale(1.1); }
+    0% { transform: translate(0px, 2px) scale(1.01);}
+    30% { transform: translate(-2px, 0px);}
+    60% { transform: translate(2px, 0px);}
+    to { transform: translate(0px, 2px);}
   }
   @keyframes wiggle_Prochainement {
-    0% { transform: translate(0px, 2px) rotate(1) scale(1); }
-    30% { transform: translate(-2px, 0px) scale(1.1); }
-    60% { transform: translate(2px, 0px) rotate(1) scale(1); }
-    to { transform: translate(0px, 2px) scale(1.1); }
+    0% { transform: translate(0px, 2px) scale(1.01);}
+    30% { transform: translate(-2px, 0px);}
+    60% { transform: translate(2px, 0px);}
+    to { transform: translate(0px, 2px);}
   }
   

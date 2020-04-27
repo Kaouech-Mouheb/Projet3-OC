@@ -1,11 +1,6 @@
 
 $mediumDevices:"(min-width: 768px)";
 $largeDevices:"(max-width: 992px)";
-body{
-    max-width:1300px;
-    margin: auto;
-    position: relative;
-}
 .fa-music{
     background: linear-gradient(#f04c5f, #f6916a);
     -webkit-text-fill-color:transparent;
