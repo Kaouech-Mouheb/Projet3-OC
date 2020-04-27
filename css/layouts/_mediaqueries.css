@@ -1,0 +1,159 @@
+@media (max-width: 576px) {
+  header {
+    width: 100%;
+  }
+  header h1 {
+    font-size: 50pt;
+  }
+  .titre {
+    text-align: center;
+    font-size: medium;
+  }
+  .la-Note__bloc, .le-Chic__bloc, .la-Palette__bloc, .le-Delice__bloc {
+    max-width: 92%;
+    padding: 0px;
+    margin: 10px auto 90px;
+    height: 100%;
+  }
+  .la-Note__bloc .titre_primaire, .le-Chic__bloc .titre_primaire, .la-Palette__bloc .titre_primaire, .le-Delice__bloc .titre_primaire {
+    margin-top: 15px;
+    padding-top: 15px;
+    font-size: 23px;
+  }
+  .la-Note__bloc h2, .le-Chic__bloc h2, .la-Palette__bloc h2, .le-Delice__bloc h2 {
+    font-size: 11px;
+    margin: 10px 0px 0px 0px;
+  }
+  .la-Note__bloc .Note-img, .le-Chic__bloc .Note-img, .la-Palette__bloc .Note-img, .le-Delice__bloc .Note-img {
+    width: 100px;
+  }
+  .la-Note__bloc section, .le-Chic__bloc section, .la-Palette__bloc section, .le-Delice__bloc section {
+    width: 95%;
+    padding: 0px 10px;
+    font-size: small;
+    line-height: 1.75;
+    margin-top: 10px;
+  }
+  .la-Note__bloc section div, .le-Chic__bloc section div, .la-Palette__bloc section div, .le-Delice__bloc section div {
+    display: flex;
+  }
+  .la-Note__bloc section p, .le-Chic__bloc section p, .la-Palette__bloc section p, .le-Delice__bloc section p {
+    width: 90%;
+  }
+  .la-Note__bloc section span, .le-Chic__bloc section span, .la-Palette__bloc section span, .le-Delice__bloc section span {
+    margin-top: 17px;
+  }
+  .la-Note__bloc section .titre_secondaire, .le-Chic__bloc section .titre_secondaire, .la-Palette__bloc section .titre_secondaire, .le-Delice__bloc section .titre_secondaire {
+    font-size: large;
+    margin: 10px 0px 20px;
+  }
+  .la-Note__bloc h3, .le-Chic__bloc h3, .la-Palette__bloc h3, .le-Delice__bloc h3 {
+    font-size: 20px;
+    padding: 20px;
+  }
+  .button {
+    width: 200px;
+    font-size: 16px;
+    padding: 10px;
+  }
+  footer {
+    font-size: 18px;
+  }
+}
+
+@media all and (min-width: 577px) and (max-width: 768px) {
+  h1 {
+    font-size: 54pt;
+  }
+  .titre {
+    text-align: center;
+    font-size: x-large;
+  }
+  .la-Note__bloc, .le-Chic__bloc, .la-Palette__bloc, .le-Delice__bloc {
+    max-width: 95%;
+    padding: 0px;
+    margin: 0px auto 100px;
+    height: 100%;
+  }
+  .la-Note__bloc .titre_primaire, .le-Chic__bloc .titre_primaire, .la-Palette__bloc .titre_primaire, .le-Delice__bloc .titre_primaire {
+    margin-top: 20px;
+    padding-top: 20px;
+    font-size: 38px;
+  }
+  .la-Note__bloc h2, .le-Chic__bloc h2, .la-Palette__bloc h2, .le-Delice__bloc h2 {
+    font-size: 24px;
+    margin: 20px 0px;
+  }
+  .la-Note__bloc .Note-img, .le-Chic__bloc .Note-img, .la-Palette__bloc .Note-img, .le-Delice__bloc .Note-img {
+    width: 150px;
+  }
+  .la-Note__bloc section, .le-Chic__bloc section, .la-Palette__bloc section, .le-Delice__bloc section {
+    width: 95%;
+    font-size: medium;
+    line-height: 1.75;
+    margin-top: 20px;
+  }
+  .la-Note__bloc section div, .le-Chic__bloc section div, .la-Palette__bloc section div, .le-Delice__bloc section div {
+    display: flex;
+  }
+  .la-Note__bloc section p, .le-Chic__bloc section p, .la-Palette__bloc section p, .le-Delice__bloc section p {
+    width: 90%;
+  }
+  .la-Note__bloc section span, .le-Chic__bloc section span, .la-Palette__bloc section span, .le-Delice__bloc section span {
+    margin: 17px 0px 0px 10px;
+  }
+  .la-Note__bloc section .titre_secondaire, .le-Chic__bloc section .titre_secondaire, .la-Palette__bloc section .titre_secondaire, .le-Delice__bloc section .titre_secondaire {
+    font-size: 33px;
+    margin: 20px 0px 40px;
+  }
+  .la-Note__bloc h3, .le-Chic__bloc h3, .la-Palette__bloc h3, .le-Delice__bloc h3 {
+    font-size: 2px;
+    padding: 20px;
+  }
+  .button {
+    width: 180px;
+    font-size: 22px;
+    padding: 15px;
+  }
+  footer {
+    font-size: 22px;
+  }
+}
+
+@media all and (min-width: 769px) and (max-width: 992px) {
+  .la-Note__bloc, .le-Chic__bloc, .la-Palette__bloc, .le-Delice__bloc {
+    max-width: 95%;
+    padding: 0px;
+    margin: 0px auto 150px;
+    height: 100%;
+  }
+  .la-Note__bloc .titre_primaire, .le-Chic__bloc .titre_primaire, .la-Palette__bloc .titre_primaire, .le-Delice__bloc .titre_primaire {
+    margin-top: 40px;
+    padding-top: 30px;
+  }
+  .la-Note__bloc .Note-img, .le-Chic__bloc .Note-img, .la-Palette__bloc .Note-img, .le-Delice__bloc .Note-img {
+    width: 200px;
+  }
+  .la-Note__bloc h2, .le-Chic__bloc h2, .la-Palette__bloc h2, .le-Delice__bloc h2 {
+    font-size: 38px;
+  }
+  .button {
+    width: 250px;
+    font-size: 26px;
+    padding: 15px;
+  }
+  footer {
+    font-size: 26px;
+  }
+  h3 {
+    font-size: 28px;
+    padding: 20px;
+  }
+}
+
+@media (min-width: 1300px) {
+  body {
+    max-width: 1290px;
+    margin: auto;
+  }
+}

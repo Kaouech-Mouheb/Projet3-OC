@@ -1129,6 +1129,30 @@ header h1 {
   color: #fdcb46;
 }
 
+footer {
+  background: #579c87;
+  display: flex;
+  justify-content: space-around;
+  font-size: 37px;
+  height: 60px;
+  width: 100%;
+  color: #fdcb46;
+  max-width: 1300px;
+  position: fixed;
+  bottom: 0.1px;
+  z-index: 2;
+}
+
+footer h5 {
+  width: 30%;
+  margin: auto 0px;
+  text-align: center;
+}
+
+footer a {
+  color: #fdcb46;
+}
+
 @media (max-width: 576px) {
   header {
     width: 100%;
@@ -1282,33 +1306,9 @@ header h1 {
   }
 }
 
-@media all and (min-width: 1300px) {
+@media (min-width: 1300px) {
   body {
     max-width: 1290px;
     margin: auto;
   }
-}
-
-footer {
-  background: #579c87;
-  display: flex;
-  justify-content: space-around;
-  font-size: 37px;
-  height: 60px;
-  width: 100%;
-  color: #fdcb46;
-  max-width: 1300px;
-  position: fixed;
-  bottom: 0.1px;
-  z-index: 2;
-}
-
-footer h5 {
-  width: 30%;
-  margin: auto 0px;
-  text-align: center;
-}
-
-footer a {
-  color: #fdcb46;
 }
